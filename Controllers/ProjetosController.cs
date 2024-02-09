@@ -8,5 +8,10 @@ namespace Sisat_Templete.Controllers
         {
             return View();
         }
+
+        public async Task<IActionResult> Details()
+        {
+            return View();
+        }
     }
 }

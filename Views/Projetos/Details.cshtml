@@ -1,0 +1,150 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="page-inner" style="width:100%">
+    <div class="page-title">
+        <h3 class="breadcrumb-header">
+            Argus
+            <i class="fa-solid fa-plus" id="addProjectIcon"> </i>
+        </h3>
+
+        <div id="projectForm" class="mt-3" style="display:none;">
+            <form asp-controller="PacotesAtualizacoes" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="form-group w-50">
+                        <label>Nome: </label>
+                        <select @* asp-for="Pacote.IdProj" *@ class="form-control" placeholder="Nome Projeto" required>
+                            @*  <option value=" @Model.Projeto.IdProjeto">@Model.Projeto.NomProjeto </option> *@
+                        </select>
+                    </div>
+                    <div class="form-group w-25">
+                        <label>Versão: </label>
+                        <input@* asp-for="Pacote.NumVersao" *@ class="form-control" placeholder="Numero Versão" />
+                    </div>
+                    <div class="form-group w-25">
+                        <label class="control-label">Data: </label>
+                        <input type="date" @* asp-for="Pacote.DtLancamento" *@ class="form-control" />
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <textarea@* asp-for="Pacote.RegistroAlteracoes" *@ class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="form-group ml-3">
+                    <label for="project-file">Selecionar Arquivo: </label>
+                    <input name="arquivo" type="file" class="form-control-file" id="project-file-atualizacao">
+                </div>
+
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeFormButton">Fechar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- start page main wrapper -->
+    @* <div id="main-wrapper">
+    <div class="row">
+
+    <div class="page-inner">
+    <!-- start page main wrapper -->
+    <div id="main-wrapper">
+    <div class="row">
+    <div class="col-xl-3 col-lg-6 col-md-6">
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <!-- Row -->
+    </div> *@
+    <div id="main-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-white">
+                    <div class="card-heading clearfix">
+                        <h4 class="card-title">Pacotes de Atualizações Argus</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="display table" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Versão</th>
+                                        <th>Data Lançamento</th>
+                                        <th>Registro de Alterações</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Shad Decker</td>
+                                        <td>Regional Director</td>
+                                        <td>Edinburgh</td>
+                                        <td>
+                                            <a class="btn btn-primary" ><i class="fa-solid fa-file-arrow-down"></i></a>
+                                            <button class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+                                            <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Bruce</td>
+                                        <td>Javascript Developer</td>
+                                        <td>Singapore</td>
+                                        <td>
+                                            <a class="btn btn-primary"><i class="fa-solid fa-file-arrow-down"></i></a>
+                                            <button class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+                                            <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donna Snider</td>
+                                        <td>Customer Support</td>
+                                        <td>New York</td>
+                                        <td>
+                                            <a class="btn btn-primary"><i class="fa-solid fa-file-arrow-down"></i></a>
+                                            <button class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+                                            <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                               @*  <tfoot>
+                                    <tr>
+                                        <th>Versão</th>
+                                        <th>Data Lançamento</th>
+                                        <th>Registro de Alterações</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </tfoot> *@
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page main wrapper -->
+        <div class="page-footer">
+            <p>Copyright &copy; <span class="current-year"></span> MPM/DF.</p>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.getElementById("addProjectIcon").addEventListener("click", function () {
+            document.getElementById("projectForm").style.display = "block";
+        });
+
+        document.getElementById("closeFormButton").addEventListener("click", function () {
+            document.getElementById("projectForm").style.display = "none";
+        });
+    </script>
+

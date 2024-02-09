@@ -50,12 +50,30 @@
 </head>
 <body class="page-header-fixed">
 
+    <!-- PAGE LOADING
+    ================================================== -->
+    <div id="preloader"></div>
 
-    <partial name="_Navbar" />
-    
+    <!-- PAGE CONTAINER
+    ================================================== -->
+    <div class="page-container">
+
     <partial name="_Sidebar" />
 
-    @RenderBody()
+        <div class="page-container">
+
+        @RenderBody()
+
+        <partial name="_Navbar" />
+
+        </div>
+
+    </div>
+
+  
+
+
+  
 
     
     

@@ -3,148 +3,45 @@
 *@
 @{
 }
-<!-- PAGE LOADING
+<!-- PAGE SIDEBAR
+       ================================================== -->
+<!-- PAGE SIDEBAR
     ================================================== -->
-<div id="preloader"></div>
-
-<!-- PAGE CONTAINER
-================================================== -->
-<div class="page-container">
-
-    <!-- PAGE SIDEBAR
-    ================================================== -->
-    <div class="page-sidebar">
-        <a class="logo-box" href="index.html">
-            <span>Sisat</span>
-            <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
-            <i class="icon-close" id="sidebar-toggle-button-close"></i>
-        </a>
-        <div class="page-sidebar-inner">
-            <div class="page-sidebar-menu">
-                <ul class="accordion-menu">
-                    <li>
-                        <a asp-controller="Projetos" asp-action="Index">
-                            <i class="menu-icon icon-inbox"></i><span>Argus</span>
-                        </a>
-                    </li>
-                    <li>
-                         <a asp-controller="Projetos" asp-action="Index">
-                            <i class="menu-icon icon-inbox"></i><span>Pai</span>
-                        </a>
-                    </li>
-                    <li>
-                         <a asp-controller="Projetos" asp-action="Index">
-                            <i class="menu-icon icon-inbox"></i><span>Sitel</span>
-                        </a>
-                    </li>
-                    <li>
-                         <a asp-controller="Projetos" asp-action="Index">
-                            <i class="menu-icon icon-inbox"></i><span>Passaport</span>
-                        </a>
-                    </li>
-                   
-                </ul>
-            </div>
+<div class="page-sidebar">
+    <a class="logo-box" asp-controller="Projetos" asp-action="Index">
+        <span>Sisat</span>
+       @*  <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"> *@</i>
+        <i class="icon-close" id="sidebar-toggle-button-close"></i>
+    </a>
+    <div class="page-sidebar-inner">
+        <div class="page-sidebar-menu">
+            <ul class="accordion-menu mt-5 border-bottom">
+                <li>
+                    <a asp-controller="Forum" asp-action="Index">
+                        <i class="fab fa-forumbee"></i><span style="margin-left:15px;">Duvidas?</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="accordion-menu">
+                <li>
+                    <a asp-controller="Projetos" asp-action="Details">
+                        <i class="menu-icon icon-inbox"></i><span>Pai</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Projetos" asp-action="Details">
+                        <i class="menu-icon icon-inbox"></i><span>Sitel</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Projetos" asp-action="Details">
+                        <i class="menu-icon icon-inbox"></i><span>Passaport</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-
-    <!-- PAGE CONTENT
-    ================================================== -->
-    <div class="page-content">
-
-       
-        <!-- start page inner -->
-        <div class="page-inner">
-            <div class="page-title">
-                <h3 class="breadcrumb-header">
-                    Projetos
-                    <i class="fa-solid fa-plus" id="addProjectIcon"></i>
-                </h3>
-
-                <!-- Formulário de Cadastro de Projeto (inicialmente oculto) -->
-                <div id="projectForm" class="mt-3" style="display:none;">
-                    <form>
-                        <div class="form-group">
-                            <label for="projectName">Nome do Projeto:</label>
-                            <input type="text" class="form-control" id="projectName" name="projectName">
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-2">Salvar</button>
-                        <button type="button" class="btn btn-secondary mt-2" id="closeFormButton">Fechar</button>
-                    </form>
-                </div>
-            </div>
-
-
-            <!-- start page main wrapper -->
-            <div id="main-wrapper">
-                <div class="row">
-
-                    <div class="page-inner">
-                        <!-- start page main wrapper -->
-                        <div id="main-wrapper">
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-6 col-md-6">
-                                    <div class="card card-white stats-widget">
-                                        <div class="card-body">
-                                            <div class="float-start">
-                                                <span class="stats-number">$815,233</span>
-                                                <p class="stats-info">Total Profit</p>
-                                            </div>
-                                            <div class="float-end">
-                                                <i class="fas fa-dollar-sign text-primary stats-icon primary"></i>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <div class="progress mb-0 mt-3">
-                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Row -->
-            </div>
-            <!-- end page main wrapper -->
-            <div class="page-footer">
-                <p>Copyright &copy; <span class="current-year"></span> MPM/DF.</p>
-            </div>
-        </div>
-        <!-- end page inner -->
-        <!-- start page right sidebar -->
-        <!-- start main right sidebar -->
-        <div class="page-right-sidebar" id="main-right-sidebar">
-            <div class="page-right-sidebar-inner">
-                <div class="right-sidebar-top">
-                    <div class="right-sidebar-tabs">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active" id="chat-tab"><a href="#chat" aria-controls="chat" type="tab" data-bs-toggle="tab">chat</a></li>
-                            <li role="presentation" id="settings-tab"><a href="#settings" aria-controls="settings" type="tab" data-bs-toggle="tab">settings</a></li>
-                        </ul>
-                    </div>
-                    <a href="#!" class="right-sidebar-toggle right-sidebar-close" data-sidebar-id="main-right-sidebar"><i class="icon-close"></i></a>
-                </div>>
-            </div>
-        </div>
-        
-    </div>
-
 </div>
 
 <!--Abre e fecha formulário -->
-
-<script>
-    document.getElementById("addProjectIcon").addEventListener("click", function () {
-        document.getElementById("projectForm").style.display = "block";
-    });
-
-    document.getElementById("closeFormButton").addEventListener("click", function () {
-        document.getElementById("projectForm").style.display = "none";
-    });
-</script>
 
