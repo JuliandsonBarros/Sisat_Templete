@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Templete_Sisat</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Chitrakoot Web" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="description" content="Crizal - Responsive Admin Dashboard Template" />
+
+    <link href="@Url.Content("~/fontawesome/css/fontawesome.css")" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="@Url.Content("~/font-awesome/css/brands.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/font-awesome/css/solid.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/font-awesome/css/regular.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/font-awesome/css/brands.css")" rel="stylesheet" type="text/css">
+
+    <!-- title  -->
+    <title>Crizal - Responsive Admin Dashboard Template</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/img/logos/favicon.png">
+    <link rel="apple-touch-icon" href="~/img/logos/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/img/logos/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/img/logos/apple-touch-icon-114x114.png">
+
+    <!-- common plugins -->
+    <link rel="stylesheet" href="~/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/plugins/icomoon/style.css" />
+    <link rel="stylesheet" href="~/plugins/uniform/css/default.css" />
+    <link rel="stylesheet" href="~/plugins/switchery/switchery.min.css" />
+    <link rel="stylesheet" href="~/plugins/switchery/switchery.min.css" />
+
+    <!-- nvd3 plugin -->
+    <link rel="stylesheet" href="~/plugins/nvd3/nv.d3.min.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+    <!-- custom css -->
+    <link href="~/css/custom.css" rel="stylesheet">
+
+
+</head>
+<body class="page-header-fixed">
+
+
+    <partial name="_Navbar" />
+    
+    <partial name="_Sidebar" />
+
+    @RenderBody()
+
+    
+    
+
+    <script src="~/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/plugins/uniform/js/jquery.uniform.standalone.js"></script>
+    <script src="~/plugins/switchery/switchery.min.js"></script>
+    <script src='~/plugins/chartjs/chart.min.js'></script>
+    <script src="~/plugins/d3/d3.min.js"></script>
+    <script src="~/plugins/nvd3/nv.d3.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.time.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.symbol.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.resize.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="~/js/pages/dashboard.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/custom.js"></script>
+</body>
+</html>
